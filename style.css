@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'SF Pro Display Medium', 'Hit the road';
-    src: url(./sf-pro-display-cufonfonts_2/SFPRODISPLAYMEDIUM.OTF);
+    src: url(./sf-pro-display-cufonfonts_2/SFPRODISPLAYMEDIUM.OTF) format("opentype");
 }
 
 * {
