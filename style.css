@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background: rgb(34, 34, 34);
+    background: -moz-linear-gradient(108deg, rgba(34, 34, 34, 1) 0%, rgba(0, 33, 38, 1) 100%);
+    background: -webkit-linear-gradient(108deg, rgba(34, 34, 34, 1) 0%, rgba(0, 33, 38, 1) 100%);
+    background: linear-gradient(108deg, rgba(34, 34, 34, 1) 0%, rgba(0, 33, 38, 1) 100%);   
+    background-size: cover;
+    font-family: 'SF Pro Display Medium', 'sans-serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    width: 30%;
+    height: 180px;
+    /* height: 520px; */
+    background-color: lightyellow;;
+    text-align: center;
+    border-radius: 26px;
+    box-shadow: 0px 0px 20px rgb(127, 44, 186);
+    transition: 0.3s ease-in-out;
+    /* overflow: hidden; */
+    z-index: 3;
+}
+
+.card:hover{
+    height: 520px;
+    overflow: visible;
+    background-color: rgb(253, 253, 210);
+}
+
+.image-section{
+    position: relative;
+    left: 50%;
+    top: -80px;
+    width: 185px;
+    height: 185px;
+    background-color: wheat;
+    transform: translateX(-50%);
+    border-radius: 95px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    box-shadow: 2px 2px 20px black;
+    z-index: 99;
+}
+
+.image-section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border-top: 3px solid lime;
+    transition: 0.5s ease-in-out;
+}
+
+.image-section:hover #profImg{
+    filter: opacity(0.8);
+    border: 2px solid red;
+}
+
+.card:hover .image-section{
+    width: 255px;
+    height: 255px;
+    border-radius: 122px;
+}
+
+/* ------ Card details stuff below CSS ------ */
+
+.text-content{
+    transform: translateY(-62px);
+    overflow: hidden;
+}
+
+.name-details{
+    padding: 2px;
+    overflow: hidden;
+}
+
+.name-details h3{
+    font-size: 2.2rem;
+    font-family: Hit the road;
+}
+
+.name-details #profession{
+    font-size: 1rem;
+    color: grey;
+    font-weight: normal;
+}
+
+#rLine{
+    height: 1px;
+    background-color: black;
+    width: 70%;
+    margin: 8px auto;
+}
+
+.about-me{
+    padding: 10px;
+}
+
+.about-me p{
+    font-size: 1rem;
+    padding: 2px 4px;
+}
+
+/* ------ Action buttons CSS ------ */
+
+.action-buttons{
+    padding: 10px;
+}
+
+.action-buttons h4{
+    font-size: 1.15rem;
+    padding: 2px;
+}
+
+.action-buttons ul li a img{
+    width: 30px;
+    margin: 4px 8px;
+    transition: 0.3s;
+    /* box-shadow: 1px 1px 15px black; */
+}
+.action-buttons ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action-buttons ul li a{
+    text-decoration: none;
+}
+
+.anchors:hover .imgs{
+    width: 40px;
+}
+
+.buttons button{
+    padding: 12px 24px;
+    margin: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    background: rgb(113, 30, 172);
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.buttons button:hover{
+    transform: scale(1.05);
+    background-color: rgb(218, 142, 0);
+    cursor: pointer;
+    background: none;
+    color: black;
+}
+
+
+/* -------- Random experiments :/ -------- */
+#rLine{
+    display: none;
+    transition: 0.3s;
+}
+.about-me{
+    display: none;
+    transition: 0.3s;
+}
+.action-buttons{
+    display: none;
+    transition: 0.3s;
+}
+.buttons{
+    display: none;
+    transition: 0.3s;
+}
+
+/* Manually making them visible on hovering */
+.card:hover #rLine{
+    display: block;
+}
+.card:hover .about-me{
+    display: block;
+}
+.card:hover .action-buttons{
+    display: block;
+}
+.card:hover .buttons{
+    display: block;
+}
+
+/* -------- Responsiveness -------- */
+
+@media screen and (max-width: 500px) {
+    .card{
+        width: 70%;
+    }
+
+    .card:hover .image-section{
+        width: 185px;
+        height: 185px;
+    }
+}
